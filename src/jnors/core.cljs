@@ -3,7 +3,7 @@
 
 (defn between?
   "Checks whether `lower <= x <= upper` is true."
-  [x upper lower]
+  [x lower upper]
   (and
    (>= x lower)
    (<= x upper)))
