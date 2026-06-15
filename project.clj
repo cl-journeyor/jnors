@@ -12,9 +12,13 @@
                  [org.clojure/core.async  "0.4.500"]]
 
   :plugins [[lein-figwheel "0.5.20"]
-            [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]]
+            [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]
+            [lein-codox "0.10.8"]]
 
   :source-paths ["src"]
+
+  :codox {:language :clojurescript
+          :source-paths ["src"]}
 
   :cljsbuild {:builds
               [{:id "dev"
