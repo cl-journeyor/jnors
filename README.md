@@ -1,10 +1,10 @@
 # jnors
 
-FIXME: Write a one-line description of your library/project.
+Supplementary lib by journeyor.
 
 ## Overview
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+General-purpose library for ClojureScript development.
 
 ## Setup
 
@@ -35,6 +35,6 @@ get live reloading, nor a REPL.
 
 ## License
 
-Copyright © 2014 FIXME
+2026 CL journeyor
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.

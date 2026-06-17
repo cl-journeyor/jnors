@@ -1,7 +1,7 @@
-(defproject jnors "0.1.0-SNAPSHOT"
+(defproject jnors "0.1.0"
   :aot :all
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+  :description "Supplementary lib by journeyor"
+  :url "https://github.com/cl-journeyor/jnors"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
