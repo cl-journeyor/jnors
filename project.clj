@@ -1,4 +1,4 @@
-(defproject jnors "0.1.0"
+(defproject io.github.cl-journeyor/jnors "0.1.0"
   :aot :all
   :description "Supplementary lib by journeyor"
   :url "https://github.com/cl-journeyor/jnors"
