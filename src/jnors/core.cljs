@@ -1,5 +1,6 @@
 (ns jnors.core
-  "Supplementary API.")
+  "Supplementary API."
+  (:require [clojure.edn :as edn]))
 
 ;;;; Types.
 
@@ -68,6 +69,23 @@
   (->> coll
        (filter pred)
        first))
+
+(defn req-edn
+  "Performs an HTTP request and expects an HTTP response body in the EDN format.
+   
+  :url - string of the resource to fetch
+   
+  :opts - map with keys such as :method, :headers and :body
+   
+  :then - fn with a single parameter to handle the parsed EDN
+   
+  :else - fn to handle a network error"
+  [& {:keys [url opts then else]}]
+  (when url
+    (cond-> (-> (js/fetch url (clj->js opts)) (.then #(.text %)))
+      then (.then #(then (edn/read-string %)))
+      else (.catch else))
+    nil))
 
 (defn slice
   "Retrieves a sequence from the item number `start` to number `endx`
